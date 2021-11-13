@@ -23,5 +23,3 @@ impl Iterator for FibonacciSeq {
         Some(self.current)
     }
 }
-
-
