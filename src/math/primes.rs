@@ -12,7 +12,7 @@ impl Primes {
     }
 
     pub fn refill(&mut self) {
-        let max_known = self.known[self.known.len()-1];
+        let max_known = self.known[self.known.len() - 1];
         let chunk_size = 1000;
 
         let lower = max_known + 2;
