@@ -1,6 +1,6 @@
-use euler::problems::prob3::solution;
+use euler::problems::prob4::solution;
 
 fn main() {
     let result = solution();
-    println!("Problem 2: {}", result);
+    println!("Solution: {}", result);
 }
