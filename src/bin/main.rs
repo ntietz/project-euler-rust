@@ -1,4 +1,4 @@
-use euler::problems::prob5::solution;
+use euler::problems::prob6::solution;
 
 fn main() {
     let result = solution();
