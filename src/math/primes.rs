@@ -36,20 +36,6 @@ impl Primes {
 
         self.max_tried = upper;
     }
-
-    pub fn refill2(&mut self) {
-        let max_known = self.known[self.known.len() - 1];
-        let chunk_size = 1000;
-
-        let lower = max_known + 2;
-        let upper = lower + chunk_size;
-
-        for n in (lower..upper).step_by(2) {
-            if !self.known.iter().any(|p| n % p == 0) {
-                self.known.push(n)
-            }
-        }
-    }
 }
 
 fn sieve_out(prime: u64, sieve: &mut BTreeSet<u64>) {
