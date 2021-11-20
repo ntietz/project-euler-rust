@@ -15,7 +15,7 @@ pub fn prime_factors(x: u64) -> Vec<u64> {
 
         while x % factor == 0 {
             factors.push(factor);
-            x = x / factor;
+            x /= factor;
         }
     }
 

@@ -7,7 +7,7 @@ pub struct Primes {
 }
 
 impl Primes {
-    pub fn new() -> Primes {
+    pub fn new() -> Self {
         Primes {
             known: vec![2, 3],
             curr: 0,
@@ -35,6 +35,12 @@ impl Primes {
         }
 
         self.max_tried = upper;
+    }
+}
+
+impl Default for Primes {
+    fn default() -> Self {
+        Self::new()
     }
 }
 

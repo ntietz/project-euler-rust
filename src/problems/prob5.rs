@@ -12,12 +12,12 @@ fn solve(limit: u64) -> u64 {
 
         for j in (i + 1)..nums.len() {
             if nums[j] % nums[i] == 0 {
-                nums[j] = nums[j] / nums[i];
+                nums[j] /= nums[i];
             }
         }
     }
 
-    nums.iter().fold(1, |a, b| a * b)
+    nums.iter().product()
 }
 
 #[cfg(test)]
