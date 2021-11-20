@@ -1,4 +1,4 @@
-use euler::problems::prob8::solution;
+use euler::problems::prob9::solution;
 
 fn main() {
     let result = solution();
