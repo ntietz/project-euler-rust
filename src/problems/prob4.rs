@@ -19,7 +19,7 @@ fn is_palindrome(n: u64) -> bool {
 
     while n > 0 {
         digits.push((n % 10) as u8);
-        n = n / 10;
+        n /= 10;
     }
 
     let midpoint = digits.len() / 2;

@@ -1,5 +1,5 @@
 pub fn solution() -> u64 {
-    solve(puzzle_input, 13)
+    solve(PUZZLE_INPUT, 13)
 }
 
 pub fn solve(input: &str, length: usize) -> u64 {
@@ -10,12 +10,12 @@ pub fn solve(input: &str, length: usize) -> u64 {
 
     digits
         .windows(length)
-        .map(|window| window.iter().fold(1, |a, b| a * b))
+        .map(|window| window.iter().product())
         .max()
         .unwrap()
 }
 
-const puzzle_input: &str = "73167176531330624919225119674426574742355349194934\
+const PUZZLE_INPUT: &str = "73167176531330624919225119674426574742355349194934\
 96983520312774506326239578318016984801869478851843\
 85861560789112949495459501737958331952853208805511\
 12540698747158523863050715693290963295227443043557\
@@ -42,11 +42,11 @@ mod test {
 
     #[test]
     fn input_is_correct_length() {
-        assert_eq!(1000, puzzle_input.len());
+        assert_eq!(1000, PUZZLE_INPUT.len());
     }
 
     #[test]
     fn test_length_4() {
-        assert_eq!(solve(puzzle_input, 4), 5832);
+        assert_eq!(solve(PUZZLE_INPUT, 4), 5832);
     }
 }
