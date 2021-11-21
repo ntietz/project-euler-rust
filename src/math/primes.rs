@@ -15,6 +15,13 @@ impl Primes {
         }
     }
 
+    pub fn get(&mut self, n: usize) -> u64 {
+        while n > self.known.len() - 1 {
+            self.refill();
+        }
+        self.known[n]
+    }
+
     pub fn refill(&mut self) {
         let chunk_size = 1000;
 
