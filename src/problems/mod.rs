@@ -9,3 +9,4 @@ pub mod prob08;
 pub mod prob09;
 pub mod prob10;
 pub mod prob11;
+pub mod prob12;
